@@ -2731,32 +2731,32 @@
             </param>
             <param name="cancellationToken"></param>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
             <summary>
                 Creates multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
             <summary>
                 Creates multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
             <summary>
                 Create document
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.CreateAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{Core.Arango.Protocol.ArangoOverwriteMode},System.Threading.CancellationToken)">
             <summary>
                 Create document
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.DeleteManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.DeleteManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Removes multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.DeleteAsync``1(Core.Arango.ArangoHandle,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.DeleteAsync``1(Core.Arango.ArangoHandle,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.String,System.Threading.CancellationToken)">
             <summary>
                 Removes single document by key
             </summary>
@@ -2771,42 +2771,42 @@
                 Bulk import
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Replaces multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Replaces multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Replace single document
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.ReplaceAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Boolean,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Replace single document
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateManyAsync``1(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Updates multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateManyAsync``2(Core.Arango.ArangoHandle,System.String,System.Collections.Generic.IEnumerable{``0},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Updates multiple documents
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateAsync``1(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Updates single document
             </summary>
         </member>
-        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
+        <member name="M:Core.Arango.Modules.IArangoDocumentModule.UpdateAsync``2(Core.Arango.ArangoHandle,System.String,``0,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Threading.CancellationToken)">
             <summary>
                 Updates single document
             </summary>
@@ -3969,16 +3969,6 @@
                 This option is meaningless in a single server setup.
             </summary>
         </member>
-        <member name="P:Core.Arango.Protocol.ArangoCollection.ReplicationFactor">
-            <summary>
-                (The default is 1): in a cluster, this attribute determines how many copies of each shard are kept on different
-                DB-Servers.
-                The value 1 means that only one copy (no synchronous replication) is kept.
-                A value of k means that k-1 replicas are kept.
-                It can also be the string "satellite" for a SatelliteCollection, where the replication factor is matched to the
-                number of DB-Servers (Enterprise Edition only).
-            </summary>
-        </member>
         <member name="P:Core.Arango.Protocol.ArangoCollection.ShardingStrategy">
             <summary>
                 This attribute specifies the name of the sharding strategy to use for the collection.
@@ -3997,15 +3987,6 @@
                 It can no longer be dropped, before the sharding-imitating collections are dropped.
                 Equally, backups and restores of imitating collections alone will generate warnings (which can be overridden) about
                 missing sharding prototype.
-            </summary>
-        </member>
-        <member name="P:Core.Arango.Protocol.ArangoCollection.WriteConcern">
-            <summary>
-                Write concern for this collection (default: 1).
-                It determines how many copies of each shard are required to be in sync on the different DB-Servers.
-                If there are less then these many copies in the cluster a shard will refuse to write.
-                Writes to shards with enough up-to-date copies will succeed at the same time however.
-                The value of writeConcern can not be larger than replicationFactor. (cluster only)
             </summary>
         </member>
         <member name="P:Core.Arango.Protocol.ArangoCollection.SmartJoinAttribute">
@@ -4046,6 +4027,90 @@
             <summary>
                 Optional object that specifies the collection level schema for documents.
                 When updating collection this needs to contain existing schema or schema will be removed
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoCollectionUpdate.CacheEnabled">
+            <summary>
+                Whether the in-memory hash cache for documents should be enabled for this collection (default: false).
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoCollectionUpdate.ReplicationFactor">
+            <summary>
+                (The default is 1): in a cluster, this attribute determines how many copies of each shard are kept on different
+                DB-Servers.
+                The value 1 means that only one copy (no synchronous replication) is kept.
+                A value of k means that k-1 replicas are kept.
+                It can also be the string "satellite" for a SatelliteCollection, where the replication factor is matched to the
+                number of DB-Servers (Enterprise Edition only).
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoCollectionUpdate.WriteConcern">
+            <summary>
+                Write concern for this collection (default: 1).
+                It determines how many copies of each shard are required to be in sync on the different DB-Servers.
+                If there are less then these many copies in the cluster a shard will refuse to write.
+                Writes to shards with enough up-to-date copies will succeed at the same time however.
+                The value of writeConcern can not be larger than replicationFactor. (cluster only)
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoCollectionUpdate.ComputedValues">
+            <summary>
+                An optional list of objects, each representing a computed value.
+            </summary>
+        </member>
+        <member name="T:Core.Arango.Protocol.ArangoComputedValue">
+            <summary>
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.Name">
+            <summary>
+                The name of the target attribute. Can only be a top-level attribute, but you may return a nested object. Cannot be
+                _key, _id, _rev, _from, _to, or a shard key attribute.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.Expression">
+            <summary>
+                An AQL RETURN operation with an expression that computes the desired value.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.Overwrite">
+            <summary>
+                Whether the computed value shall take precedence over a user-provided or existing attribute.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.ComputeOn">
+            <summary>
+                An array of strings to define on which write operations the value shall be computed.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.KeepNull">
+            <summary>
+                Whether the target attribute shall be set if the expression evaluates to null. You can set the option to false to
+                not set (or unset) the target attribute if the expression returns null. The default is true.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoComputedValue.FailOnWarning">
+            <summary>
+                Whether to let the write operation fail if the expression produces a warning. The default is false.
+            </summary>
+        </member>
+        <member name="T:Core.Arango.Protocol.ArangoComputeOn">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:Core.Arango.Protocol.ArangoComputeOn.Insert">
+            <summary>
+                Insert
+            </summary>
+        </member>
+        <member name="F:Core.Arango.Protocol.ArangoComputeOn.Update">
+            <summary>
+                Update
+            </summary>
+        </member>
+        <member name="F:Core.Arango.Protocol.ArangoComputeOn.Replace">
+            <summary>
+                Replace
             </summary>
         </member>
         <member name="T:Core.Arango.Protocol.ArangoCursor">
@@ -4476,7 +4541,7 @@
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.Fields">
             <summary>
-                (Hash | Skiplist | MultiDimensional) An array of attribute paths.
+                (Persistent | Inverted | MultiDimensional) An array of attribute paths.
                 (TTL | Fulltext) An array with exactly one attribute path.
                 (Geo) An array with one or two attribute paths.
                 If it is an array with one attribute path location, then a geo-spatial index on all documents is created using
@@ -4506,12 +4571,20 @@
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.Sparse">
             <summary>
-                (Hash | SkipList)
+                (Persistent)
             </summary>
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.Unique">
             <summary>
-                (Hash | SkipList | MultiDimensional) Note: Unique indexes on non-shard keys are not supported in a cluster.
+                (Persistent | MultiDimensional) Note: Unique indexes on non-shard keys are not supported in a cluster.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoIndex.CacheEnabled">
+            <summary>
+                (Persistent) this attribute controls whether an extra in-memory hash cache is created for the index.
+                The hash cache can be used to speed up index lookups.
+                The cache can only be used for queries that look up all index attributes via an equality lookup (==).
+                The hash cache cannot be used for range scans, partial lookups or sorting.
             </summary>
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.InBackground">
@@ -4522,7 +4595,7 @@
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.Deduplicate">
             <summary>
-                (Hash | SkipList) Controls whether inserting duplicate index values from the same document into a unique array
+                (Persistent) Controls whether inserting duplicate index values from the same document into a unique array
                 index will lead to a unique constraint error or not.
                 The default value is true, so only a single instance of each non-unique index value will be inserted into the index
                 per document.
@@ -4532,7 +4605,16 @@
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.Estimate">
             <summary>
-                (Hash | SkipList) Doc?
+                (Persistent) This attribute controls whether index selectivity estimates are maintained for the index.
+                Not maintaining index selectivity estimates can have a slightly positive impact on write performance.
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoIndex.StoredValues">
+            <summary>
+                (Persistent) The optional storedValues attribute can contain an array of paths to additional attributes to store in the index.
+                These additional attributes cannot be used for index lookups or for sorting, but they can be used for projections.
+                This allows an index to fully cover more queries and avoid extra document lookups.
+                The maximum number of attributes in storedValues is 32.
             </summary>
         </member>
         <member name="P:Core.Arango.Protocol.ArangoIndex.ExpireAfter">
@@ -4590,6 +4672,11 @@
             </summary>
         </member>
         <member name="F:Core.Arango.Protocol.ArangoIndexType.MultiDimensional">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Core.Arango.Protocol.ArangoIndexType.Inverted">
             <summary>
             
             </summary>
@@ -5136,6 +5223,7 @@
                 An optional numeric value that can be used to set a timeout for waiting on collection locks.
                 If not specified, a default value will be used.
                 Setting lockTimeout to 0 will make ArangoDB not time out waiting for a lock.
+                This is only meaningful when using exclusive transaction locks.
             </summary>
         </member>
         <member name="P:Core.Arango.Protocol.ArangoTransaction.Params">
@@ -5161,6 +5249,11 @@
         <member name="P:Core.Arango.Protocol.ArangoTransactionScope.Write">
             <summary>
                 Collections to write to
+            </summary>
+        </member>
+        <member name="P:Core.Arango.Protocol.ArangoTransactionScope.Exclusive">
+            <summary>
+                Collections to write to with an exclusive lock
             </summary>
         </member>
         <member name="T:Core.Arango.Protocol.ArangoUpdateResult`1">

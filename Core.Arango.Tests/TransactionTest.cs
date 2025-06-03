@@ -22,8 +22,9 @@ namespace Core.Arango.Tests
             {
                 Collections = new ArangoTransactionScope
                 {
-                    Write = new List<string> {"test"}
-                }
+                    Exclusive = ["test"]
+                },
+                AllowImplicit = false
             });
 
             await Arango.Document.CreateManyAsync(t1, "test", new List<Entity>
@@ -41,8 +42,9 @@ namespace Core.Arango.Tests
             {
                 Collections = new ArangoTransactionScope
                 {
-                    Write = new List<string> {"test"}
-                }
+                    Exclusive = ["test"]
+                },
+                AllowImplicit = false
             });
 
             await Arango.Document.CreateManyAsync(t2, "test", new List<Entity>
@@ -108,12 +110,12 @@ namespace Core.Arango.Tests
             Assert.Equal(3, (await Arango.Query.FindAsync<Entity>("test", "test", $"true")).Count);
 
             var exception =
-                await Assert.ThrowsAsync<ArangoException>(() => Arango.Query.FindAsync<Entity>(t2, "test", $"true"));
+                await Assert.ThrowsAsync<ArangoException>(() => Arango.Query.FindAsync<Entity>(t2, "test", $"true").AsTask());
 
             Assert.NotNull(exception.ErrorNumber);
             Assert.NotNull(exception.Code);
-            Assert.Equal(ArangoErrorCode.ErrorTransactionNotFound, exception.ErrorNumber);
-            Assert.Equal(HttpStatusCode.NotFound, exception.Code);
+            Assert.Equal(ArangoErrorCode.ErrorTransactionAborted, exception.ErrorNumber);
+            Assert.Equal(HttpStatusCode.Gone, exception.Code);
         }
 
         [Theory]
@@ -175,8 +177,8 @@ namespace Core.Arango.Tests
 
             Assert.NotNull(exception.ErrorNumber);
             Assert.NotNull(exception.Code);
-            Assert.Equal(ArangoErrorCode.ErrorTransactionNotFound, exception.ErrorNumber);
-            Assert.Equal(HttpStatusCode.NotFound, exception.Code);
+            Assert.Equal(ArangoErrorCode.ErrorTransactionAborted, exception.ErrorNumber);
+            Assert.Equal(HttpStatusCode.Gone, exception.Code);
         }
     }
 }

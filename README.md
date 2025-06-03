@@ -1,4 +1,4 @@
-![Build](https://github.com/coronabytes/dotnet-arangodb/workflows/Build/badge.svg)
+[![Build](https://github.com/coronabytes/dotnet-arangodb/actions/workflows/build.yml/badge.svg)](https://github.com/coronabytes/dotnet-arangodb/actions/workflows/build.yml)
 [![Nuget](https://img.shields.io/nuget/v/Core.Arango)](https://www.nuget.org/packages/Core.Arango)
 [![Nuget](https://img.shields.io/nuget/dt/Core.Arango)](https://www.nuget.org/packages/Core.Arango)
 
@@ -7,7 +7,7 @@ dotnet add package Core.Arango
 ```
 
 # .NET driver for ArangoDB
-- .NET Standard 2.0, 2.1, .NET 5.0 and .NET 6.0 driver for ArangoDB 3.8+
+- .NET Standard 2.0, 2.1, .NET 8 and .NET 9 driver for ArangoDB 3.11+
 - LINQ support (WIP)
 - Newtonsoft.Json and System.Text.Json serialization support with PascalCase and camelCase options
 - Updates from anonymous types supported as (Id, Key, Revision, From, To) properties are translated to (_id, _key, _rev, _from, _to)

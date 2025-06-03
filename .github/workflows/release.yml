@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     
     - name: Setup
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.x
+        dotnet-version: 9.x
         
     - name: Build Version
       id: vars
-      run: echo "::set-output name=VERSION::<Version>${GITHUB_REF#refs/tags/}</Version>"
+      run: echo "VERSION=<Version>${GITHUB_REF#refs/tags/}</Version>" >> "$GITHUB_OUTPUT"
       
     - name: Apply Version
       uses: jacobtomlinson/gha-find-replace@v2

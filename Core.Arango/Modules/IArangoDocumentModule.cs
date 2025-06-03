@@ -26,7 +26,7 @@ namespace Core.Arango.Modules
         ///     HTTP 304 is returned.
         /// </param>
         /// <param name="cancellationToken"></param>
-        Task<T> GetAsync<T>(ArangoHandle handle,
+        ValueTask<T> GetAsync<T>(ArangoHandle handle,
             string collection,
             string key,
             bool throwOnError = true,
@@ -45,7 +45,7 @@ namespace Core.Arango.Modules
         ///     if it has the same revision value
         /// </param>
         /// <param name="cancellationToken"></param>
-        Task<List<T>> GetManyAsync<T>(ArangoHandle handle,
+        ValueTask<List<T>> GetManyAsync<T>(ArangoHandle handle,
             string collection,
             IEnumerable<object> keys,
             bool? ignoreRevs = null,
@@ -54,7 +54,7 @@ namespace Core.Arango.Modules
         /// <summary>
         ///     Creates multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<TR>>> CreateManyAsync<T, TR>(ArangoHandle database,
+        ValueTask<List<ArangoUpdateResult<TR>>> CreateManyAsync<T, TR>(ArangoHandle database,
             string collection,
             IEnumerable<T> docs,
             bool? waitForSync = null,
@@ -63,13 +63,14 @@ namespace Core.Arango.Modules
             bool? returnOld = null,
             bool? returnNew = null,
             bool? silent = null,
+            bool? exclusive = null,
             ArangoOverwriteMode? overwriteMode = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Creates multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<ArangoVoid>>> CreateManyAsync<T>(ArangoHandle database,
+        ValueTask<List<ArangoUpdateResult<ArangoVoid>>> CreateManyAsync<T>(ArangoHandle database,
             string collection,
             IEnumerable<T> docs,
             bool? waitForSync = null,
@@ -78,13 +79,14 @@ namespace Core.Arango.Modules
             bool? returnOld = null,
             bool? returnNew = null,
             bool? silent = null,
+            bool? exclusive = null,
             ArangoOverwriteMode? overwriteMode = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Create document
         /// </summary>
-        Task<ArangoUpdateResult<TR>> CreateAsync<T, TR>(ArangoHandle database,
+        ValueTask<ArangoUpdateResult<TR>> CreateAsync<T, TR>(ArangoHandle database,
             string collection, T doc,
             bool? waitForSync = null,
             bool? keepNull = null,
@@ -92,13 +94,14 @@ namespace Core.Arango.Modules
             bool? returnOld = null,
             bool? returnNew = null,
             bool? silent = null,
+            bool? exclusive = null,
             ArangoOverwriteMode? overwriteMode = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Create document
         /// </summary>
-        Task<ArangoUpdateResult<ArangoVoid>> CreateAsync<T>(ArangoHandle database,
+        ValueTask<ArangoUpdateResult<ArangoVoid>> CreateAsync<T>(ArangoHandle database,
             string collection, T doc,
             bool? waitForSync = null,
             bool? keepNull = null,
@@ -106,22 +109,23 @@ namespace Core.Arango.Modules
             bool? returnOld = null,
             bool? returnNew = null,
             bool? silent = null,
+            bool? exclusive = null,
             ArangoOverwriteMode? overwriteMode = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Removes multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<TR>>> DeleteManyAsync<T, TR>(ArangoHandle database, string collection,
-            IEnumerable<T> docs, bool? waitForSync = null, bool? returnOld = null, bool? ignoreRevs = null,
+        ValueTask<List<ArangoUpdateResult<TR>>> DeleteManyAsync<T, TR>(ArangoHandle database, string collection,
+            IEnumerable<T> docs, bool? waitForSync = null, bool? returnOld = null, bool? ignoreRevs = null, bool? exclusive = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Removes single document by key
         /// </summary>
-        Task<ArangoUpdateResult<TR>> DeleteAsync<TR>(ArangoHandle database, string collection, string key,
-            bool? waitForSync = null, bool? returnOld = null, bool? silent = null, string ifMatch = null,
-            CancellationToken cancellationToken = default);
+        ValueTask<ArangoUpdateResult<TR>> DeleteAsync<TR>(ArangoHandle database, string collection, string key,
+            bool? waitForSync = null, bool? returnOld = null, bool? silent = null, bool? exclusive = null,
+            string ifMatch = null, CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Export all documents in batches from a collection (Query.ExecuteStreamAsync)
@@ -133,69 +137,69 @@ namespace Core.Arango.Modules
         /// <summary>
         ///     Bulk import
         /// </summary>
-        Task ImportAsync<T>(ArangoHandle database, string collection, IEnumerable<T> docs, bool complete = true,
+        ValueTask ImportAsync<T>(ArangoHandle database, string collection, IEnumerable<T> docs, bool complete = true,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Replaces multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<TR>>> ReplaceManyAsync<T, TR>(ArangoHandle database, string collection,
+        ValueTask<List<ArangoUpdateResult<TR>>> ReplaceManyAsync<T, TR>(ArangoHandle database, string collection,
             IEnumerable<T> docs, bool? waitForSync = null, bool? returnOld = null, bool? returnNew = null,
-            bool? ignoreRevs = null,
+            bool? ignoreRevs = null, bool? exclusive = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Replaces multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<ArangoVoid>>> ReplaceManyAsync<T>(ArangoHandle database, string collection,
+        ValueTask<List<ArangoUpdateResult<ArangoVoid>>> ReplaceManyAsync<T>(ArangoHandle database, string collection,
             IEnumerable<T> docs, bool? waitForSync = null, bool? returnOld = null, bool? returnNew = null,
-            bool? ignoreRevs = null,
+            bool? ignoreRevs = null, bool? exclusive = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Replace single document
         /// </summary>
-        Task<ArangoUpdateResult<TR>> ReplaceAsync<T, TR>(ArangoHandle database, string collection, T doc,
+        ValueTask<ArangoUpdateResult<TR>> ReplaceAsync<T, TR>(ArangoHandle database, string collection, T doc,
             bool waitForSync = false, bool? returnOld = null, bool? returnNew = null, bool? ignoreRevs = null,
-            CancellationToken cancellationToken = default);
+            bool? exclusive = null, CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Replace single document
         /// </summary>
-        Task<ArangoUpdateResult<ArangoVoid>> ReplaceAsync<T>(ArangoHandle database, string collection, T doc,
+        ValueTask<ArangoUpdateResult<ArangoVoid>> ReplaceAsync<T>(ArangoHandle database, string collection, T doc,
             bool waitForSync = false, bool? returnOld = null, bool? returnNew = null, bool? ignoreRevs = null,
-            CancellationToken cancellationToken = default);
+            bool? exclusive = null, CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Updates multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<ArangoVoid>>> UpdateManyAsync<T>(ArangoHandle database, string collection,
+        ValueTask<List<ArangoUpdateResult<ArangoVoid>>> UpdateManyAsync<T>(ArangoHandle database, string collection,
             IEnumerable<T> docs, bool? waitForSync = null, bool? keepNull = null, bool? mergeObjects = null,
             bool? returnOld = null, bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null,
-            CancellationToken cancellationToken = default);
+            bool? exclusive = null, CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Updates multiple documents
         /// </summary>
-        Task<List<ArangoUpdateResult<TR>>> UpdateManyAsync<T, TR>(ArangoHandle database, string collection,
+        ValueTask<List<ArangoUpdateResult<TR>>> UpdateManyAsync<T, TR>(ArangoHandle database, string collection,
             IEnumerable<T> docs, bool? waitForSync = null, bool? keepNull = null, bool? mergeObjects = null,
             bool? returnOld = null, bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null,
+            bool? exclusive = null, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        ///     Updates single document
+        /// </summary>
+        ValueTask<ArangoUpdateResult<ArangoVoid>> UpdateAsync<T>(ArangoHandle database, string collection, T doc,
+            bool? waitForSync = null, bool? keepNull = null, bool? mergeObjects = null, bool? returnOld = null,
+            bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null, bool? exclusive = null,
             CancellationToken cancellationToken = default);
 
         /// <summary>
         ///     Updates single document
         /// </summary>
-        Task<ArangoUpdateResult<ArangoVoid>> UpdateAsync<T>(ArangoHandle database, string collection, T doc,
+        ValueTask<ArangoUpdateResult<TR>> UpdateAsync<T, TR>(ArangoHandle database, string collection, T doc,
             bool? waitForSync = null, bool? keepNull = null, bool? mergeObjects = null, bool? returnOld = null,
-            bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null,
-            CancellationToken cancellationToken = default);
-
-        /// <summary>
-        ///     Updates single document
-        /// </summary>
-        Task<ArangoUpdateResult<TR>> UpdateAsync<T, TR>(ArangoHandle database, string collection, T doc,
-            bool? waitForSync = null, bool? keepNull = null, bool? mergeObjects = null, bool? returnOld = null,
-            bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null,
+            bool? returnNew = null, bool? silent = null, bool? ignoreRevs = null, bool? exclusive = null,
             CancellationToken cancellationToken = default);
     }
 }
